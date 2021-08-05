@@ -2,7 +2,9 @@ import React from 'react'
 import './assets/css/base/base.css'
 import Home from "./pages/Home"
 import Sobre from "./pages/Sobre"
+import Page404 from "./pages/Page404"
 
+import Header from "./components/Header"
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,12 +17,18 @@ function App() {
   return (
   <>
     <Router>
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route path="/sobre">
-        <Sobre />
-      </Route>
+      <Header />
+      <Switch>  
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/sobre">
+          <Sobre />
+        </Route>
+        <Route>
+          <Page404 />
+        </Route>
+      </Switch>
     </Router>
   </>
   )
