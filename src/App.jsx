@@ -5,6 +5,7 @@ import Sobre from "./pages/Sobre"
 import Page404 from "./pages/Page404"
 import Post from "./pages/Post"
 import Header from "./components/Header"
+import Categoria from "./pages/Categoria"
 import {
   BrowserRouter as Router,
   Switch,
@@ -27,6 +28,9 @@ function App() {
         </Route>
         <Route path="/posts/:id">
           <Post />
+        </Route>
+        <Route path="/categoria/:id">
+          <Categoria />
         </Route>
         <Route>
           <Page404 />
