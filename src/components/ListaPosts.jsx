@@ -8,7 +8,7 @@ const ListPosts = ({ url }) => {
 
   useEffect(() => {
     buscar(url, setData)
-  }, [])
+  }, [url])
 
   return (
     <section className="posts container">
